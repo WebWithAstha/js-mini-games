@@ -1,0 +1,176 @@
+@font-face {
+    font-family: mina;
+    src: url(Mina-Regular.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: mina;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right bottom, #01171c 10%, rgb(25, 25, 146));
+    background: url(https://i.pinimg.com/564x/d9/d5/57/d9d5577cf4e7d8304ec29cd780b85ba1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#game-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 1vw;
+    width: 45vw;
+}
+
+#game-board h1 {
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+}
+
+#card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin: .5vw 0;
+    margin-bottom: 1vw;
+}
+
+.card {
+    flex-shrink: 0;
+    aspect-ratio: 9/8;
+    width: calc((100% - 6vw)/4);
+    overflow: hidden;
+    border-radius: 1.5vw;
+    position: relative;
+    cursor: pointer;
+}
+
+.card .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    pointer-events: none;
+    background: linear-gradient(to right bottom, #01171c 40%, rgb(13, 157, 189) 70%, #1a8f4c 95%);
+    border: .8vw solid rgb(154, 186, 197);
+    border-radius: 1.5vw;
+
+}
+
+#card-wrapper .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#game-board #score-div {
+    display: flex;
+    align-items: center;
+    gap: .8vw;
+    margin: 1vw 0;
+    border-radius: 10px;
+    color: white;
+}
+
+#game-board #score-div h3 {
+    font-size: 1.3vw;
+
+}
+
+#game-board #score-div h4 {
+    font-size: 1.2vw;
+}
+
+#game-board button {
+    padding: .7vw 1.6vw;
+    font-size: 1.5vw;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background: linear-gradient(to right bottom, #01171c 10%, rgb(25, 25, 146));
+    transition: background .3s ease;
+    transition: color .3s ease;
+    cursor: pointer;
+    color: white;
+
+}
+
+#game-board button:hover {
+    background: #fff;
+    color: black;
+}
+
+
+@media (max-width : 650px) {
+    #game-board {
+        width: 85vw;
+        gap: 4vw;
+    }
+
+    #game-board h1 {
+        font-size: 8vw;
+        -webkit-text-stroke: 2px rgb(243, 243, 243);
+        color: transparent;
+
+    }
+
+    #card-wrapper {
+        gap: 4vw;
+    }
+
+    .card {
+        aspect-ratio: 8/9;
+        width: calc((100% - 12vw)/4);
+        border-radius: 2.5vw;
+    }
+
+    .card .overlay {
+        border: 1.8vw solid rgb(154, 186, 197);
+        border-radius: 2.5vw;
+
+    }
+
+    #game-board #score-div {
+        gap: 1.8vw;
+        margin-top: 4vw;
+        background: none;
+    }
+
+    #game-board #score-div h3 {
+        font-size: 4.3vw;
+    }
+
+    #game-board #score-div h4 {
+        font-size: 4vw;
+    }
+
+    #game-board button {
+        padding: 1.7vw 4.6vw;
+        font-size: 4.2vw;
+    }
+
+}

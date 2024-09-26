@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: mina;
+    cursor: default;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+#game-board {
+    box-shadow: 2px 2px 5px #034d49;
+    width:38vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vw;
+    gap: 1.5vw;
+    position: relative;
+}
+
+
+#game-box {
+    display: flex;
+    width: 100%;
+    gap: 2vw;
+    justify-content: space-between;
+
+}
+
+.box {
+    aspect-ratio: 1/1;
+    width: 50%;
+    padding: 2vw;
+    /* opacity: 0; */
+}
+
+#player-box {
+    rotate: 90deg;
+}
+
+#player-box img {
+    transform: scalex(-1);
+}
+
+#bot-box {
+    rotate: -90deg;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#tags {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: .5vw;
+}
+
+#tags h1 {
+    width: 50%;
+    background-color: lightseagreen;
+    text-transform: uppercase;
+    font-size: 2vw;
+    padding-top: .4vw;
+
+
+}
+#score {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: .5vw;
+}
+
+#score h1 {
+    width: 50%;
+    background-color: lightseagreen;
+    text-transform: uppercase;
+    font-size: 2vw;
+    padding-top: .4vw;
+}
+
+
+
+#game-board h2 {
+    width: 100%;
+    text-align: center;
+    background-color: lightseagreen;
+    font-size: 1.8vw;
+    padding:  .5vw 0;
+
+}
+
+#choices {
+    display: flex;
+    gap: 1vw;
+    height: 9vw;
+    /* background-color: crimson; */
+    text-transform: capitalize;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    font-size: 4vw;
+}
+
+#choices img {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 40%;
+    padding: 1.2vw;
+    background-color: lightseagreen;
+    background-color: #8fdeda;
+    transition: background-color .1s ease;
+    cursor: pointer;
+}
+
+#choices img:hover {
+    background-color: #fff;
+    border: .2vw solid lightseagreen;
+}
+
+#reset{
+    padding: .5vw 1vw;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    background-color: #8fdeda;
+}
+#reset:hover {
+    background-color: lightseagreen;
+    cursor: pointer;
+}
+
+@media (max-width:650px) {
+#game-board {
+    width: 80vw;
+    padding: 4vw;
+}
+#game-box {
+    gap: 10vw;
+
+}
+.box {
+    padding: 4vw;
+}
+#tags {
+    gap: 1.5vw;
+}
+#tags h1 {
+    font-size: 7vw;
+    padding-top: 1.4vw;
+}
+#game-board h2 {
+    font-size: 4.8vw;
+    padding: 1.5vw 0;
+    margin-bottom: 3vw;
+}
+#choices {
+    gap: 3vw;
+}
+#choices img {
+    width: 16vw;
+    height: 16vw;
+    padding: 3.2vw;
+}
+}
